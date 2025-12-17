@@ -37,7 +37,7 @@ public class ChatAiActivity extends AppCompatActivity {
     private ImageButton sendButton;
     private RecyclerView chatRecyclerView;
     private ChatAdapter chatAdapter;
-    private String apiKey = "AIzaSyD_rBphXep_AHkFfG2eJTauzXE6gIlW8v8";
+    private String apiKey = "your api key";
     private ArrayList<ChatMessage> chatMessages;
     private RequestQueue queue;
 
