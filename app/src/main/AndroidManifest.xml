@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <application
+        android:name=".Activity.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/iconnhoimaucotim"
+        android:label="Nhồi máu cơ tim"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/iconnhoimaucotim"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCanhBaoDotQuy"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyClb1TqgoizMeHFJJn5wdh0nRCwjTjSSKU" /> <activity
+        android:name=".Activity.setting_AccountActivity"
+        android:exported="false" />
+        <activity
+            android:name=".Activity.Register_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.setting_inf_deviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.detail_device_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.add_deviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.homeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChatAiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".Service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

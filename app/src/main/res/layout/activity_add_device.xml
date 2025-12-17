@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.add_deviceActivity"
+    android:background="@drawable/bk">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/bluemain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm thiết bị"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrowleft" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#CBFFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:text="1) Mã thiết bị:"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/idThietBi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="88dp"
+                android:text="2) Tên người dùng:"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/tennguoidung"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="140dp"
+                android:text="3) Giới tính:"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/gioitinh"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="188dp"
+                android:text="4) Tuổi:"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/tuoi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="240dp"
+                android:text="5) Chiều cao (m):"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/cao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="292dp"
+                android:text="6) Cân nặng (kg):"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/cannang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="332dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="7) Đã từng bị đột quỵ chưa"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/tiensu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/teiew8"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="648dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="13) Lượng cholesterol từ bác sĩ "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/cholesterol"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/teiew9"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="716dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="14) Trình độ giáo dục (không/ trung học/ đại học/ sau đại học)"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/giaoDuc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="584dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="12) Có dùng thuốc huyết áp không"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/dungthuocHA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="536dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="11) Có bị tăng huyết áp không"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/tieuduong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="490dp"
+                android:text="10)Tiểu đường:"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/tieuduong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="392dp"
+                android:layout_marginEnd="4dp"
+                android:text="8) Có hút thuốc không:"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/hutthuoc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tex12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="444dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="9) Số điếu thuốc 1 ngày"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toStartOf="@+id/sodieu1ngay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/idThietBi"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/tuoi"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="176dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/cao"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/cannang"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="280dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/tennguoidung"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/idThietBi">
+
+            </EditText>
+
+            <Spinner
+                android:id="@+id/gioitinh"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tennguoidung">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/tiensu"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="212dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tennguoidung">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/tieuduong"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="488dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/dungthuocHA"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="592dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/giaoDuc"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="728dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/tanghuyetap"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tieuduong">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/hutthuoc"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="216dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/gioitinh">
+
+            </Spinner>
+
+            <EditText
+                android:id="@+id/cholesterol"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="480dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/gioitinh">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/sodieu1ngay"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="268dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/boder_0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/gioitinh">
+
+            </EditText>
+
+            <Button
+                android:id="@+id/btnxong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="400dp"
+                android:backgroundTint="@color/bluemain"
+                android:text="Lưu"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teiew9"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
